@@ -80,7 +80,6 @@
   <p>Have a question or interested in working together?<br>Please reach out — I’d be happy to start a conversation.</p >
   <!-- Hidden iframe -->
 <iframe name="hidden_iframe" style="display:none;"></iframe>
-
 <!-- Contact Form -->
 <form id="contact-form" action="https://formspree.io/f/mjkwkpqb" method="POST" target="hidden_iframe">
   <!-- FormSubmit hidden fields -->
@@ -88,16 +87,14 @@
   <input type="hidden" name="_next" value="https://renemorenski.com/thankyou.html">
 
   <!-- Form Fields -->
-  <input type="text" name="name" placeholder="Name" required>
-  <input type="email" name="email" placeholder="Email" required>
-  <textarea name="message" placeholder="Message" required></textarea>
+  <input type="text" name="name" placeholder="Name" required><br>
+  <input type="email" name="email" placeholder="Email" required><br>
+  <textarea name="message" placeholder="Message" required></textarea><br>
   <button type="submit">Send</button>
 </form>
-
 <!-- Script to auto-redirect main page after iframe loads -->
 <script>
   const iframe = document.getElementsByName('hidden_iframe')[0];
-
   iframe.onload = function() {
     window.location.href = "https://renemorenski.com/thankyou.html";
   }
