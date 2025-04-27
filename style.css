@@ -1,72 +1,98 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 .sticky-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    padding: 10px 20px;
-    z-index: 1000;
-    text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 10px 20px;
+  z-index: 1000;
+  text-align: center;
 }
 
 .logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
-    height: 40px;
-    margin-right: 10px;
+  height: 40px;
+  margin-right: 10px;
 }
 
 .sticky-header h1 {
-    font-size: 20px;
-    margin: 0;
+  font-size: 20px;
+  margin: 0;
 }
 
 .powered-by {
-    font-size: 12px;
-    color: gray;
-    margin: 5px 0 0 0;
+  font-size: 12px;
+  color: gray;
+  margin: 5px 0 0 0;
 }
 
 .hero {
-    padding-top: 150px; /* To make room for sticky header */
-    background: url('hero-image.jpg') no-repeat center center/cover;
-    text-align: center;
-    color: #333;
-    padding: 100px 20px;
+  padding-top: 150px; /* to make room for sticky header */
+  background: url('images/hero-image.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  text-align: center;
 }
 
-.about, .services, .contact {
-    padding: 60px 20px;
-    text-align: center;
+.hero-text {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.about, .services, .contact, .thoughts-insights {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portrait {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 footer {
-    text-align: center;
-    font-size: 12px;
-    color: gray;
-    padding: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: gray;
+  padding: 20px;
 }
 
 /* Form styling */
 form input, form textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 form button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
