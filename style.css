@@ -42,6 +42,7 @@ body {
 
 .sticky-header h1 {
     font-size: 20px;
+    font-family: 'Lora', serif;
     margin: 0;
     text-align: left;
 }
@@ -49,6 +50,7 @@ body {
 .subheader {
     font-size: 16px;
     font-weight: normal;
+    font-family: 'Lora', serif;
 }
 
 .powered-by {
@@ -56,6 +58,7 @@ body {
     color: gray;
     margin: 5px 0 0 0;
     text-align: left;
+    font-family: 'Lora', serif;
 }
 
 @media (max-width: 600px) {
