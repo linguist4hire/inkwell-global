@@ -80,20 +80,31 @@
   <p>Have a question or interested in working together?<br>Please reach out — I’d be happy to start a conversation.</p >
   <!-- Hidden iframe -->
 <iframe name="hidden_iframe" style="display:none;"></iframe>
+
 <!-- Contact Form -->
 <form id="contact-form" action="https://formspree.io/f/mjkwkpqb" method="POST" target="hidden_iframe">
   <!-- FormSubmit hidden fields -->
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_next" value="https://www.renemorenski.com/thankyou.html">
+
   <!-- Form Fields -->
   <input type="text" name="name" placeholder="Name" required><br>
   <input type="email" name="email" placeholder="Email" required><br>
   <textarea name="message" placeholder="Message" required></textarea><br>
-  <button type="submit">Send</button>
+  <button type="submit" id="submit-button">Send</button>
 </form>
-<!-- Script to auto-redirect main page after iframe loads -->
+
+<!-- Script -->
 <script>
+  const form = document.getElementById('contact-form');
+  const button = document.getElementById('submit-button');
   const iframe = document.getElementsByName('hidden_iframe')[0];
+
+  form.addEventListener('submit', function() {
+    button.disabled = true;
+    button.innerText = 'Sending...';
+  });
+
   iframe.onload = function() {
     window.location.href = "https://www.renemorenski.com/thankyou.html";
   }
