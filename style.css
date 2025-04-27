@@ -12,7 +12,7 @@ body {
 .text-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
 }
 
 .sticky-header {
@@ -29,7 +29,6 @@ body {
 .logo-container {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
 }
 
 .logo {
@@ -38,18 +37,49 @@ body {
 }
 
 .sticky-header h1 {
-  font-size: 20px;
+  font-size: 24px;
   margin: 0;
   white-space: normal;
   word-break: break-word;
 }
 
+.subheader {
+  font-size: 16px;
+  font-weight: normal;
+  color: #666;
+}
+  
 .powered-by {
   font-size: 12px;
   color: gray;
-  margin: 2px 0 0 0;
-}
+  margin-top: 5px;
+  margin-left: 75px;
+  }
 
+@media (max-width: 600px) {
+    .logo-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .text-container {
+        margin-top: 5px;
+    }
+
+    .sticky-header h1 {
+        font-size: 20px;
+    }
+
+    .subheader {
+        font-size: 14px;
+    }
+
+    .powered-by {
+        margin-left: 0;
+        text-align: center;
+    }
+}
 .hero {
   padding-top: 150px; /* to make room for sticky header */
   background: url('images/hero-image.jpg') no-repeat center center/cover;
