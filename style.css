@@ -38,7 +38,7 @@ body {
 
 .hero {
     padding-top: 150px; /* To make room for sticky header */
-    background: url('your-hero-image.jpg') no-repeat center center/cover;
+    background: url('hero-image.jpg') no-repeat center center/cover;
     text-align: center;
     color: #333;
     padding: 100px 20px;
