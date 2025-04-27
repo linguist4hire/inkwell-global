@@ -1,6 +1,13 @@
 body {
     font-family: 'Lora', serif;
+    font-size: 18px;
     margin: 0;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
     .thankyou-hero {
       padding-top: 150px;
