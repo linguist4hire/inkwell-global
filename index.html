@@ -78,13 +78,37 @@
 <section class="contact" id="contact">
   <h2>CONTACT</h2>
   <p>Have a question or interested in working together?<br>Please reach out — I’d be happy to start a conversation.</p >
-<form action="https://formspree.io/f/mjkwkpqb" method="POST">
+<form id="contact-form" action="https://formspree.io/f/mjkwkpqb" method="POST">
        <input type="text" name="name" placeholder="Name" required><br>
     <input type="email" name="email" placeholder="Email" required><br>
     <textarea name="message" placeholder="Message" required></textarea><br>
     <input type="hidden" name="_redirect" value="https://www.renemorenski.com/thankyou.html">
   <button type="submit">Send</button>
 </form>
+  <script>
+  const form = document.getElementById('contact-form');
+
+  form.addEventListener('submit', async function(event) {
+    event.preventDefault();
+    
+    const formData = new FormData(form);
+    const action = form.action;
+    
+    const response = await fetch(action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      window.location.href = 'https://www.renemorenski.com/thankyou.html';
+    } else {
+      alert('Oops! There was a problem submitting your form');
+    }
+  });
+</script>
 </section>
 
 <footer>
@@ -93,6 +117,5 @@
   <img src="images/linkedin-icon.png" alt="LinkedIn" class="linkedin-icon">
 </a>
 </footer>
-
 </body>
 </html>
