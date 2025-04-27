@@ -151,3 +151,7 @@ form button {
   border: none;
   cursor: pointer;
 }
+.linkedin-icon {
+    height: 30px;
+    margin-left: 15px;
+}
