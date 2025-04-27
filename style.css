@@ -1,4 +1,4 @@
-body {
+html, body {
     font-family: 'Lora', serif;
     font-size: 18px;
     margin: 0;
@@ -46,9 +46,11 @@ body {
       text-decoration: underline;
     }
 .header-content {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin: 0 auto;
 }
     .logo-container {
         display: flex;
@@ -67,7 +69,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     background-color: #ffffff;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     padding: 10px 5%;
@@ -117,6 +119,22 @@ body {
         align-items: center;
         text-align: center;
     }
+    .sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 10px 5%;
+    z-index: 1000;
+}
+    .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
     .text-container {
         margin-top: 5px;
@@ -194,6 +212,9 @@ form button {
   color: white;
   border: none;
   cursor: pointer;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 /* Disabled/Sending button style */
