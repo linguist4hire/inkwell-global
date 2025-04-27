@@ -187,6 +187,12 @@ form button {
   border: none;
   cursor: pointer;
 }
+
+/* Disabled/Sending button style */
+form button.sending {
+  background-color: #999; /* soft gray */
+  cursor: not-allowed;
+}
 .linkedin-icon {
     height: 30px;
     margin-left: 15px;
